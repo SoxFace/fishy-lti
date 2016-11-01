@@ -8,7 +8,7 @@
     <lticm:property name="privacy_level">anonymous</lticm:property>
     <lticm:options name="editor_button">
       <lticm:property name="url">
-      https://localhost:4443/images.html
+      https://soxface.github.io/fishy-lti/index.html
       </lticm:property>
       <lticm:property name="icon_url">https://www.uts.edu.au/sites/default/files/favicon.ico</lticm:property>
       <lticm:property name="text">UTS Banners</lticm:property>
