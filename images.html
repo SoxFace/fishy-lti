@@ -3,28 +3,31 @@
   <head>
   </head>
   <body>
-  Hello world
+  Pick a banner to add to your site
   <div>
-    <a href="#"><img src='http://farm5.staticflickr.com/4060/4272330540_121214b881.jpg' style='width: 200px;'/></a>
-    <a href="#"><img src='http://farm2.staticflickr.com/1310/4726904401_97b9ae9f8f.jpg' style='width: 200px;'/></a>
-    <a href="#"><img src='http://farm4.staticflickr.com/3080/2848467651_79e65e0450.jpg' style='width: 200px;'/></a>
-    <a href="#"><img src='http://farm4.staticflickr.com/3111/2849276340_ca46076ae2.jpg' style='width: 200px;'/></a>
-    <a href="#"><img src='http://farm4.staticflickr.com/3062/2849454868_14a8240f90.jpg' style='width: 200px;'/></a>
-    <a href="#"><img src='http://farm4.staticflickr.com/3092/2849263556_568de4e198.jpg' style='width: 200px;'/></a>
-    <a href="#"><img src='http://farm4.staticflickr.com/3036/2849253618_fc6019324c.jpg' style='width: 200px;'/></a>
-    <a href="#"><img src='http://farm3.staticflickr.com/2784/4515407842_2b2b0b0b2e.jpg' style='width: 200px;'/></a>
+    <a href="#"><img src='https://canvas.uts.edu.au/courses/58/files/1805/preview' style='width: 200px;'/></a>
+    <a href="#"><img src='https://canvas.uts.edu.au/courses/58/files/1804/preview' style='width: 200px;'/></a>
+    <a href="#"><img src='https://canvas.uts.edu.au/courses/58/files/1807/preview' style='width: 200px;'/></a>
   </div>
   <script>
   (function() {
+    // Original URL https://www.edu-apps.org/tool_redirect?url=%2Fimages.html
     var url = location.href;
     var args = (url.split(/\?/)[1] || "").split(/\&/);
+    // args = "url=%2Fimages.html"
     var params = {}
     for(var idx in args) {
+      // idx = [0..7] and args = "url=%2Fimages.html"
       var arg = args[idx].split(/\=/);
+      // arg = "url,%2Fimages.html"
       var key = arg[0];
+      // key = "url"
       var value = arg[1];
+      // value = "%2Fimages.html"
       if(key && value) {
+        // params = { url: '/%2Fimages.html }
         params[key] = decodeURIComponent(value);
+        // decodeURIComponent('%2Findex.html') = '/index.html'
       }
     }
     var links = document.getElementsByTagName('A');
